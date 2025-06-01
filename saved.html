@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>portfoilio project for team 2</title>
+         <script src="project.js"> </script>
+        <style>
+        #background{
+            background-image: url(media/Rectangle\ 3.png);
+            background-size: 100%;
+            height: 170px;
+            width: 100%;
+            display: flex;
+            z-index: 0.9;
+            margin-top: -1%;
+            padding-right: 19px;
+            margin-left: -1%;
+        }
+        #write{
+            display: flex;
+            z-index: 1;
+            justify-content: space-evenly;
+            width: 100%;
+            height: 50px;
+            border: 2px  solid white;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            opacity: 0.7;
+            margin-top: 25px;
+            padding-top: 10px;
+            color: green;
+        }
+        button{
+          width: 150px;
+          height: 20px;
+          background-color: white;
+          color: green;
+          border-radius: 20px;
+          border: 2px solid green;
+          margin-top: 10px;
+        }
+        #logo{
+            height: 50px;
+            width: 50px;
+        }
+        #search{
+            width: 40%;
+            height: 20px;
+            padding-left: 10px;
+            border: 1px solid white;
+            color: black;
+            border-radius: 20px;
+            margin-top: 10px;
+            opacity: 0.5;
+        }
+        #notif{
+            width: 20px;
+            height: 20px;
+            margin-top: 10px;
+            opacity: 0.5;
+        }
+      #user{
+        height: 50px;
+        width: 200px;
+      }
+      #dp{
+       margin-top: -5% ;
+       height: 150px;
+       width: 150px;
+       margin-left: 7%;  
+      }
+      #leftbar{
+        width: 30%;
+        height: 100%;
+        justify-content: space-evenly;
+        padding-right: 10px;
+      }
+      #body{
+        display: flex;
+      }
+      #menu{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: -8%;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom:1px solid green;
+      }
+
+      ul{
+        list-style-type: none;
+        display: flex;
+        gap: 20px;
+      }
+      .buttn{
+        border: none;
+        color: black;
+      }
+      #grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows: 1fr ;
+        row-gap: 20px;
+        padding-left: 5%;
+        padding-top: 3%;
+      }
+      .savebox{
+        display: flex;
+        border: 1px solid green;
+        height: 150px;
+        width: 80%;
+      }
+        </style>
+    </head>
+  <body>
+      <header>
+        <div id="background">
+            <div id="write"> <img src="media/Logo.png" alt="logo" id="logo"> 
+                <p><b>jodna technologies</b></p> <p><a href="explore.html">explore</a></p> 
+                <input type="search" id="search" placeholder="search creative works"> 
+                <button><a href="upload.html">share your work &rightarrow;</a></button> <a href="notifications.html"><img src="media/png.webp" alt="notify" id="notif"></a>
+             <img src="media/Component 1.png" alt="" id="user"></div>
+     
+      </header>
+      <main>
+      <div>
+        <img src="media/Ellipse 1.png" alt="dp" id="dp">
+      </div>
+      <div id="body">
+        <div id="leftbar">
+          <div style="justify-self: center" >
+          <span> <p style="padding-left: 30px; font-size: 30px;" id="name"> <b>  </b></p> <p style="font-size: 15px; padding-left: 10px;" id="profilebio"> </p><p style="padding-left: 50px;" id="skill"> </p></span>
+            <button method="post" type="submit" style="color: white; background-color: green;" onclick="updateProfile()" > edit profile</button>
+            </div>
+            <div style="padding-left: 3px; margin-top: 5%;">
+              <div style="gap: 53%; display: flex;"> <p>portfoilio viewers </p>  <p>800</p></div>
+              <div  style="gap: 80%; display: flex;"><p>likes </p>          <p>200</p> </div> <br> <br>
+               <div  style="gap: 85%; display: flex;"> <p>help </p>     <p> &GreaterGreater;</p></div><br>
+               <div  style="gap: 80%; display: flex;"><p>setting</p>       <p>&GreaterGreater;</p></div>
+            </div>
+            <div style="margin-top: 28%; margin-bottom: 5%;">
+              <button style="margin-left: 20%;" onclick="logoutUser()" > log out &hookleftarrow;</button>
+            </div>
+            </div>
+            <div>
+            <div id="menu">
+                <ul>
+                 <button class="buttn" >my work</button>
+                 <button class="buttn" style="color: green;">saved items</button>
+                 <button class="buttn">draft</button>
+                 <button class="buttn">Analytics</button>
+                 <button class="buttn"> about</button>
+                </ul>
+            </div>
+            <div id="grid">
+             
+            </div>
+            </div>
+            </div>
+            
+            </main>
+            <script>
+              /*document.addEventListener("DOMContentLoaded", () => {
+    fetchSavedItems();
+  });
+
+  function fetchSavedItems() {
+    fetch('https://jodna-portfolio.onrender.com/item/all') // Replace with your actual API
+      .then(response => response.json())
+      .then(data => {
+        const savedItems = data.items; // Assuming API returns { items: [...] }
+        const grid = document.getElementById("grid");
+
+        // Clear any existing saveboxes
+        grid.innerHTML = "";
+
+        savedItems.forEach(item => {
+          // Create a savebox div
+          const saveBox = document.createElement("div");
+          saveBox.className = "savebox";
+
+          // Populate savebox content (e.g., title, image, description)
+          saveBox.innerHTML = `
+            <div style="padding: 10px;">
+              <h4>${item.title}</h4>
+              <img src="${item.image}" alt="${item.title}" style="height: 80px; width: auto;" />
+              <p>${item.description}</p>
+            </div>
+          `;
+
+          // Append to grid
+          grid.appendChild(saveBox);
+        });
+      })
+      .catch(error => {
+        console.error("Failed to fetch saved items:", error);
+      });
+  } */
+
+            </script>
+            </body>
+            </html>
