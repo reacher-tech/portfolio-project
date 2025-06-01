@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore/Filter</title>
+    <link rel="stylesheet" href="my-style.css">
+</head>
+<body style="background-color: rgb(248, 244, 238);">
+    <div class="navigate">
+        <img id="logo" src="./Images/Logo.png">
+        <h2 id="company-name">Jodna Technologies</h2>
+        <a id="explore" href="">Explore</a>
+        <img id="search" src="./Images/fi-rr-search.png">
+        <input type="text" placeholder="Search Creative work" id="creative-search">
+        <button id="share">share your work</button>
+        <img src="./Images/mdi_arrow-right-thin.png" class="share">
+        <img class="notify" src="./Images/notify.png">
+
+        <div class="top-profile">
+            <div id="top-pic"><img src="./Images/default-pic.jpg" style="border-radius: 100%; height: 100%; width: 100%; object-fit: cover;">
+            </div>
+            <div>
+                <div id="top-name"><b>Adewale Austin</b></div>
+                <div id="top-field" style="font-size: x-small;">UI/UX Design Intern</div>
+            </div>
+            <img id="drop-down" src="./Images/lsicon_down-outline.png">
+        </div>
+
+    </div>
+
+    <div class="filter">
+        <div style="background-color: white; width: 300px; padding-left: 10px;">
+            <h2>Filter</h2>
+            <h3>Tech stack/Tools used</h3>
+
+            <ul style="margin-left: -20px;">
+                <li>Design
+                    <ul style="list-style-type: none; margin-left: -40px;">
+                        <li><input type="checkbox" id="figma"><label for="figma">Figma</label></li>
+                        <li><input type="checkbox" id="adobe-xd"><label for="adobe-xd">Adobe XD</label></li>
+                        <li><input type="checkbox" id="sketch"><label for="sketch">Sketch</label></li>
+                        <li><input type="checkbox" id="canva"><label for="canva">Canva</label></li>
+                    </ul>
+                </li>
+                <li style="margin-top: 15px;">Frontend
+                    <ul style="list-style-type: none; margin-left: -40px;">
+                        <li><input type="checkbox" id="react"><label for="react">React</label></li>
+                        <li><input type="checkbox" id="angular"><label for="angular">Angular</label></li>
+                        <li><input type="checkbox" id="html"><label for="html">HTML/CSS</label></li>
+                        <li><input type="checkbox" id="tailwind"><label for="tailwind">Tailwind</label></li>
+                        <li><input type="checkbox" id="vue"><label for="vue">Vue</label></li>
+                    </ul>
+                </li>
+                <li style="margin-top: 15px;">Backend
+                    <ul style="list-style-type: none; margin-left: -40px;">
+                        <li><input type="checkbox" id="node"><label for="node">Node JS</label></li>
+                        <li><input type="checkbox" id="django"><label for="django">Django</label></li>
+                        <li><input type="checkbox" id="flask"><label for="flask">Flask</label></li>
+                        <li><input type="checkbox" id="laravel"><label for="laravel">Laravel</label></li>
+                    </ul>
+                </li>
+                <li style="margin-top: 15px;">Others
+                    <ul style="list-style-type: none; margin-left: -40px;">
+                        <li><input type="checkbox" id="wordpress"><label for="wordpress">WordPress</label></li>
+                        <li><input type="checkbox" id="framer"><label for="framer">Framer</label></li>
+                        <li><input type="checkbox" id="webflow"><label for="webflow">Webflow</label></li>
+                        <li><input type="checkbox" id="blender"><label for="blender">Blender</label></li>
+                    </ul>
+                </li>
+            </ul>
+             
+        </div>
+
+        <div>
+
+        <div class="search-sort">
+            
+            <div class="input-search">
+                <input type="text" placeholder="Search Creatives Work">
+                <img src="./Images/fi-rr-search.png" alt="search">
+            </div>
+            
+                <div class="sort">
+                    <img src="/Images/fi-rr-filter.png">
+                     <span style="position: relative; top: -6px;left: 5px;">Sort By</span>
+                   <img src="/Images/lsicon_down-outline.png" style="position: relative;top: 6px;left: 5px;">
+                </div>
+
+        </div>
+            <div style="display: flex; gap: 10px; margin-top: 20px;margin-left: -25px;">
+
+                <button>All</button>
+                <button><span style="text-align: center;">UI/UX Design</span>
+                    <img src="/Images/mdi_chevron-right.png">
+                </button>
+                <button><span>Frontend</span>
+                    <img src="/Images/mdi_chevron-right.png">
+                </button>
+                <button><span>Graphic Design</span>
+                    <img src="/Images/mdi_chevron-right.png">
+                </button>
+                <button><span>Backend</span>
+                    <img src="/Images/mdi_chevron-right.png">
+                </button>
+                <button><span>Web Dev</span>
+                    <img src="/Images/mdi_chevron-right.png">
+                </button>
+                <button><span>Mobile Apps</span>
+                    <img src="/Images/mdi_chevron-right.png">
+                </button>
+                <button><span>Animation</span>
+                    <img src="/Images/mdi_chevron-right.png">
+                </button>
+                <button><span>Branding</span>
+                    <img src="/Images/mdi_chevron-right.png">
+                </button>
+                <button><span>Motion Design</span>
+                    <img src="/Images/mdi_chevron-right.png">
+                </button>
+                <button><span>Illustration</span>
+                    <img src="/Images/mdi_chevron-right.png">
+                </button>
+                <button><span>3D</span>
+                    <img src="/Images/mdi_chevron-right.png">
+                </button>
+
+            </div>
+        </div>
+        
+    </div>
+
+</body>
+</html>

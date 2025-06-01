@@ -1,0 +1,396 @@
+        header{
+            background-color: white;
+            padding: 10px 10px 10px 10px;
+            height: 45px;
+            margin-top: -8px;
+            margin-left: -10px;
+            margin-right: -5px;
+
+          }
+          body{
+            align-content: center;
+            background-color: rgb(234, 233, 233);
+          }
+          main{
+            display: flex;
+          }
+          #bar{
+            display: flex;
+            flex-direction: column;
+            margin-left: -10%;
+          }
+          #header{
+            display: flex;
+            justify-content: space-between;
+
+          }
+          #explore{
+            color: rgb(3, 34, 3);
+            border: none;
+            border-radius: 30px;
+            width: 10%;
+            height: 25px;
+            margin: 15px;
+            font-size: 10px;
+            background-color: white;
+            
+          }
+          #search{ 
+            height: 20px;
+            width: 30%;
+            border-radius: 20px;
+            padding-left: 10px;
+            margin: 10px;
+            border: 1px solid black;
+          }
+          #noty{
+            height: 35px;
+            width: 35px;
+          }
+        #logo{
+            width: 50;
+            height: 30;
+            margin-top: -10px;
+
+        }
+        p{
+            font-size: 18px;
+            color: rgb(3, 63, 3);
+        }
+        #userprofile{
+            height: 30px;
+
+        }
+        #sharebutton{
+            border-radius: 30px;
+            border: 2px solid green;
+            height: 30px;
+            width: 100%;
+            margin: 7px;
+            background-color: white;
+            color: green;
+        }
+     #firstbar{
+      display: flex;
+      justify-content: space-evenly;
+      padding-top: 20px;
+      background-color: rgb(234, 233, 233);
+     }
+    
+     #sortbar{
+      display: flex;
+      border: 2px solid green;
+      align-items: center;
+      align-content: center;
+      background-color: white;
+      height: 30px;
+      margin-left: 5%;
+      justify-content: center;
+      border: none;
+      width: 25%;
+     margin-bottom:10px ;
+     
+     } 
+     #searchbar{
+      display: flex;
+      border: 2px solid black;
+       padding-left: 10px;
+      height: 30px;
+      background-color: white;
+      width: 60%;
+      border: none;
+       margin-bottom:10px;
+       font-size: 15px;
+       
+     }
+     #searchspace{
+      width: 100%;
+      border: none;
+      align-content: center;
+      justify-content: center;
+      background-color: white;
+      border: none;
+     }
+    #console{
+      display: flex;
+      justify-content: space-evenly;
+      padding-right: 20px;
+      margin: 5px;
+      margin-left: -20px;
+      position: relative;
+      margin-right: -5px;
+      margin-left: -17%;
+      
+    }
+    .filterbuttons{
+      border-radius: 5px;
+      font-size: 13px;
+      background-color: rgb(234, 233, 233);
+      border: 1px solid green;
+      color: gray;
+      position: relative;
+      font-size: 13px;
+    
+
+    }
+    .filterbuttons:hover{
+      background-color: green;
+      color: white;
+      position: relative;
+    }
+  #grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    position: relative;
+    justify-content: space-evenly;
+    margin: 2%;
+    gap: 30px;
+    margin-right: 10%;
+    margin-left: -15%;
+  
+  }
+  .gridbox{
+    display: flex;
+    background-color: white;
+    height: 99%;
+    width: 100% ;
+    padding: 5px 10px 10px;
+    position: relative;
+    border-radius: 5%;
+    flex-direction: column;
+  }
+  .gridimage{
+    
+    height: 70%;
+    width: 100%;
+  }
+  #filter{
+   width: 46%;
+
+  }
+  .design{
+    border-radius: 30px;
+    background-color: rgb(201, 187, 206);
+    color: rgb(113, 21, 81);
+    border: none;
+    font-size: 10px;
+   height: 20px;
+  }
+  .beginners{
+    border-radius: 30px;
+    background-color: rgb(179, 199, 199);
+    color: rgb(35, 75, 131);
+    font-size: 10px;
+    height: 20px;
+    border: none;
+  }
+  .tutorial{
+    border-radius: 30px;
+    background-color: rgb(200, 161, 169);
+    color: rgb(126, 14, 117);
+    border: none;
+    font-size: 6px;
+    height: 20px;
+  }
+  .f.b{
+    color: black;
+    font-size: 7px;
+    
+  }
+span{
+  margin-top: -5%;
+}
+#sidebar{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 10px 10px 10px 10px;
+  margin-top: 19px;
+  height: 2%;
+  width: 250px;
+}
+ul{
+  display: inline-block;
+  padding-left: -50px;
+  font-size: 15px;
+}
+#dropcontent{
+  display: none;
+  background-color: white;
+  width: 15%;
+  position: absolute;
+  margin-top: 3%;
+  margin-left: -1%;
+}
+h5{
+padding: 5px;
+}
+@media (min-width: 600px) {
+    header   #header {
+        display: flex !important;
+    }
+#mobile{
+        display: none !important;
+    }
+}
+
+@media   (max-width: 599px) {
+   header #mobile {
+        display: flex !important;
+    }
+    #header {
+        display: none !important;
+    }
+}
+#mobile{
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+}
+#nav{
+     padding: 20px;
+    display: none;
+    flex-direction: column;
+    
+}
+@media (min-width: 600px) {
+    body   #sidebar {
+        display: flex !important;
+    }
+    #bar{
+      display: flex !important ;
+    }
+}
+
+@media   (max-width: 599px) {
+   body #sidebar {
+        display: none !important;
+    }
+    #sortbar{
+      display: none;
+    }
+    #searchbar{
+      width: 60%;
+      padding-left: 20px;
+      margin-left: -25%;
+      
+      align-self: center;
+      border-radius: 30px;
+    }
+}
+@media (min-width: 600px) {
+    body   #console {
+        display: flex !important;
+    }
+    #scrollbars{
+      display: none !important ;
+    }
+}
+
+@media   (max-width: 599px) {
+   body #console {
+        display: none !important;
+    }
+    #consoles{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 30px;
+}
+#scrollbars{
+    margin-top: 10px;
+    width: 60%;
+  height: 50px;
+  margin-left: 8%;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  
+}
+.filterbuttons{
+    margin-top: 10px;
+   border: none;
+   width: 100%;
+    background-color: white;
+    font-size: 15px;
+    color: plum;
+    height: 20px;
+    
+}
+}
+
+
+@media   (max-width: 599px) {
+   body #grid{
+    margin-top: 5%;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    gap: 20px;
+  
+    
+}
+.gridbox{
+    margin-left: -5%;
+    height: 100%;
+    width: 100%;
+    background-color:  rgb(227, 249, 227);
+}
+.design{
+    margin-top: 5%;
+    width: 20%;
+    font-size: 15px;
+    border: 1px solid white;
+    background-color: rgb(233, 189, 233);
+    border-radius: 30px;
+}
+
+.beginners{
+    margin-left: 5%;
+    width: 30%;
+    font-size: 15px;
+    border: 1px solid rgb(39, 86, 32);
+    background-color: rgb(195, 246, 212);
+    border-radius: 30px;
+}
+.tutorial{
+    margin-left: 10%;
+    width: 30%;
+    font-size: 15px;
+    border: 1px solid rgb(48, 21, 21);
+    background-color: rgb(214, 244, 247);
+    border-radius: 30px;
+}
+main{
+  overflow-x: hidden;
+}
+}
+#nav{
+     padding: 20px;
+    display: none;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    margin-top: 10%;
+    
+}
+#buttons{
+    display: flex;
+  gap: 200px;
+  height: 50px;
+  
+}
+.save{
+  background-color: brown;
+  border: 1px solid white;
+  border-radius: 20px;
+  color: white;
+}
+.add{
+  color: white;
+  background-color: rgb(68, 229, 84);
+  border: 1px solid rgb(222, 68, 68);
+  border-radius: 20px;
+}

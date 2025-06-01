@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>portfoilio project for team 2</title>
+        <link rel="stylesheet" href="explore.css">
+        <script src="project.js"></script>
+    </head>
+    <body>
+        <header>
+            <div id="header">
+                <img src="media/Logo.png" alt="logo" id="logo">
+                 <p><b>Jodna Technologies</b></p> 
+                <button id="explore"><b>Explore</b></button> 
+                <input type="text" name="search" placeholder=" search creative work" id="search">
+                 <a href="upload.html"><button id="sharebutton">share your work &#8594</button></a>
+                <a href="notifications.html"></a><img src="media/png.webp" alt="" id="noty"></a>
+                <a href="profile-dashboard.html"><img src="media/Component 1.png" alt="userprofile" id="userprofile"></a>
+            </div>
+              <div id="mobile" class="mobview"> 
+               <div style="display: flex;"><img src="media/Logo.png" alt="" style="height: 50px; width: 50p;" ><p>jodna Technologies</p></div>
+            
+            <div id="menu" onclick="display()"><img src="media/dropdown.png" alt="" id="mobimg" style="height: 50px; width: 50px;">
+              <div id="nav">
+                <div id="buttons">
+                  <button type="reset" style="width: 10%; background-color:rgb(219, 247, 247); border: none;"><a href="explore.html">X</a></button>
+                   <button style="background-color: rgb(219, 247, 247); border: none;"> <a href="upload.html"> share your work</a></button>
+                  </div>
+                <a href="explore.html" class="nav" style="padding-top: 10%; margin-top: 10%;"><div style="height: 100px; font-size: 50px;"> explore </div></a>
+                <a href="notifications.html" class="nav"><div onclick="notifications.html" style="height: 100px; font-size: 50px; margin-top: 10%;"> notifications</div></a>
+                <a href="profile-dashboard.html" class="nav" style="margin-top: 20%;"><div><img src="media/Component 1.png" alt="" id="user"></div></a>
+                </div > 
+              </div>
+            </div>
+        </header>
+        <main id="main">
+          <div id="controls">
+          <div id="sidebar">
+            <div> <span> FILTER</span>
+               <button type="button" id="hide" onclick='toggleDropdown();' style="margin-left: 25%;"> x  </button>
+              </div>
+              <div id="dropcontent" style="flex-direction: column;">
+                <h5> tech stack / tools used</h5>
+                <ul>
+                  <li>DESIGN</li><br>
+                    figma<input type="checkbox"> <br>
+                    canvas<input type="checkbox"> <br>
+                    adobe xd <input type="checkbox"><br>
+                    sketch <input type="checkbox"><br><br>
+                  
+                  <li>FRONTEND</li><br>
+                    html/ css <input type="checkbox"><br>
+                    angular <input type="checkbox"><br>
+                    react <input type="checkbox"><br>
+                    thalwind <input type="checkbox"><br>
+                    vue <input type="checkbox"><br><br>
+                  
+                  <li>BACKEND </li><br>
+                    djungo <input type="checkbox"><br>
+                    node.js <input type="checkbox"><br>
+                    flask <input type="checkbox"><br>
+                    laveral <input type="checkbox"><br><br>
+                  
+                  <li>others</li> <br>
+                    framer <input type="checkbox"><br>
+                    wordpress <input type="checkbox"><br>
+                    webflow <input type="checkbox"><br>
+                    blender <input type="checkbox"><br><br>
+                </ul>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div id="bar">
+           <div id="firstbar">
+            <div id="searchbar"> <img src="media/fi-rr-search.png" alt="" style="height: 15px; width: 15px; margin: 10px;"><input type="button" value="search creative works" style="background-color: white; border: none;" id="place"></div>
+            <div id="sortbar"><img src="media/fi-rr-filter.png" alt=""> <span>sort by &blacktriangledown;</span></div>
+         </div>
+        
+         <div id="console">
+            <button class="filterbuttons"> ALL</button>
+            <button class="filterbuttons"> DESIGN UI/UX &GreaterGreater; </button>
+            <button class="filterbuttons"> FRONTEND &GreaterGreater;</button>
+            <button class="filterbuttons"> GRAPHIC DESIGN  &GreaterGreater;</button>
+            <button class="filterbuttons"> BACKEND  &GreaterGreater;</button>
+            <button class="filterbuttons"> WEB DEV &GreaterGreater;</button>
+            <button class="filterbuttons"> FULL STACK &GreaterGreater;</button>
+            <button class="filterbuttons" style="margin-left: 10px;"> MOBILE APP &GreaterGreater;</button>
+         </div>
+           <div id="scrollbars">
+         <div id="consoles">
+            <button class="filterbuttons"> ALL</button>
+            <button class="filterbuttons"> DESIGN </button>
+            <button class="filterbuttons"> FRONTEND</button>
+            <button class="filterbuttons"> GRAPHIC</button>
+            <button class="filterbuttons"> <a href="explore (2).htmls">BACKEND</a></button>
+            <button class="filterbuttons"> WEB DEV</button>
+            <button class="filterbuttons" style="width:60px"> FULL STACK</button>
+            <button class="filterbuttons" style="margin-left: 10px; width:60px"> MOBILE APP</button>
+            
+         </div>
+         </div>
+         <div id="grid">
+           <div class="gridbox" id="first"> <img src="media/Frame 1000004673 (10).png" alt="griditems" class="gridimage"> <p style="font-size: 13px;"> fundamentals of ui/ux</p> <span class="f.b"><button class="design">design</button> <button class="beginners"> beginners</button> <button class="tutorial"> tutorials</button> <button class="save" onclick="saveItem(this)">save</button> <button class="add" onclick="sendSavedItems()">add to dashboard</button></span></div>
+           <div class="gridbox" id="second"> <img src="media/Frame 1000004673 (1).png" alt="griditems" class="gridimage"> <p style="font-size: 13px;"> fundamentals of ui/ux</p> <span class="f.b"><button class="design">design</button> <button class="beginners"> beginners</button> <button class="tutorial"> tutorials</button> <button class="save" onclick="saveItem(this)">save</button> <button class="add" onclick="sendSavedItems()">add to dashboard</button></span></div>
+          <div class="gridbox" id="third"> <img src="media/Frame 1000004673 (8).png" alt="griditems" class="gridimage"> <p style="font-size: 13px;"> fundamentals of ui/ux</p> <span class="f.b"><button class="design">design</button> <button class="beginners"> beginners</button> <button class="tutorial"> tutorials</button> <button class="save" onclick="saveItem(this)">save</button> <button class="add" onclick="sendSavedItems()">add to dashboard</button></span></div>
+           <div class="gridbox" id="fourth"> <img src="media/Frame 1000004673 (4).png" alt="griditems" class="gridimage"> <p style="font-size: 13px;"> fundamentals of ui/ux</p> <span class="f.b"><button class="design">design</button> <button class="beginners"> beginners</button> <button class="tutorial"> tutorials</button> <button class="save" onclick="saveItem(this)">save</button> <button class="add" onclick="sendSavedItems()">add to dashboard</button></span></div>
+           <div class="gridbox" id="fifth"> <img src="media/Frame 1000004673 (7).png" alt="griditems" class="gridimage"> <p style="font-size: 13px;"> fundamentals of ui/ux</p> <span class="f.b"><button class="design">design</button> <button class="beginners"> beginners</button> <button class="tutorial"> tutorials</button> <button class="save" onclick="saveItem(this)">save</button> <button class="add" onclick="sendSavedItems()">add to dashboard</button> </span></div>
+           <div class="gridbox" id="sixth"> <img src="media/Frame 1000004673 (2).png" alt="griditems" class="gridimage"> <p style="font-size: 13px;"> fundamentals of ui/ux</p> <span class="f.b"><button class="design">design</button> <button class="beginners"> beginners</button> <button class="tutorial"> tutorials</button> <button class="save" onclick="saveItem(this)">save</button> <button class="add" onclick="sendSavedItems()">add to dashboard</button></span></div>
+          <div class="gridbox" id="seventh"> <img src="media/Frame 1000004673 (6).png" alt="griditems" class="gridimage"> <p style="font-size: 13px;"> fundamentals of ui/ux</p> <span class="f.b"><button class="design">design</button> <button class="beginners"> beginners</button> <button class="tutorial"> tutorials</button> <button class="save" onclick="saveItem(this)">save</button> <button class="add" onclick="sendSavedItems()">add to dashboard</button></span></div>
+           <div class="gridbox" id="eigth"> <img src="media/Frame 1000004673 (9).png" alt="griditems" class="gridimage"> <p style="font-size: 13px;"> design fundamentals ui/ux</p> <span class="f.b"><button class="design">design</button> <button class="beginners"> beginners</button> <button class="tutorial"> tutorials</button> <button class="save" onclick="saveItem(this)">save</button> <button class="add" onclick="sendSavedItems()">add to dashboard</button></span></div>
+           <div class="gridbox" id="ninth"> <img src="media/Frame 1000004673 (11).png" alt="griditems" class="gridimage"> <p style="font-size: 13px;"> fundamentals of ui/ux</p> <span class="f.b"><button class="design">design</button> <button class="beginners"> beginners</button> <button class="tutorial"> tutorials</button><button class="save" onclick="saveItem(this)">save</button> <button class="add" onclick="sendSavedItems()">add to dashboard</button></span></div>
+           <div class="gridbox" id="tenth"> <img src="media/Frame 1000004673 (5).png" alt="griditems" class="gridimage"> <p style="font-size: 13px;"> fundamentals of ui/ux</p> <span class="f.b"><button class="design">design</button> <button class="beginners"> beginners</button> <button class="tutorial"> tutorials</button> <button class="save" onclick="saveItem(this)">save</button> <button class="add" onclick="sendSavedItems()">add to dashboard</button></span></div>
+          <div class="gridbox" id="eleventh"> <img src="media/Frame 1000004673 (13).png" alt="griditems" class="gridimage"> <p style="font-size: 13px;"> fundamentals of ui/ux</p> <span class="f.b"><button class="design">design</button> <button class="beginners"> beginners</button> <button class="tutorial"> tutorials</button> <button class="save" onclick="saveItem(this)">save</button> <button class="add" onclick="sendSavedItems()">add to dashboard</button></span></div>
+           <div class="gridbox" id="twelth"> <img src="media/Frame 1000004673 (14).png" alt="griditems" class="gridimage"> <p style="font-size: 13px;"> fundamentals of ui/ux</p> <span class="f.b"><button class="design">design</button> <button class="beginners"> beginners</button> <button class="tutorial"> tutorials</button> <button class="save" onclick="saveItem(this)">save</button> <button class="add" onclick="sendSavedItems()">add to dashboard</button></span></div>
+          </div>
+        </div>
+        </main>
+        <footer>
+        </footer>
+   <script>
+    /*function toggleDropdown() {
+  const dropdown = document.getElementById("dropcontent");
+  var SubHead = document.getElementById("console")
+  var gridMove = document.getElementById('grid');
+  if(dropdown.style.display=== "none"){
+    dropdown.style.display = "flex";
+    gridMove.style.marginLeft = "10%";
+    SubHead.style.marginLeft = "15%"
+  }
+  else{
+    dropdown.style.display ="none";
+    gridMove.style.marginLeft = "-15%";
+    SubHead.style.marginLeft= "-17%";
+  }
+  
+};
+function display() {
+            var Bar = document.getElementById('nav')
+            var IMG = document.getElementById('mobimg')
+            var User = document.getElementById('user')
+            var Body = document.getElementById('main')
+        
+            if(Bar.style.display= "none"){
+              Bar.style.display= "flex";
+              Bar.style.justifySelf = "center"
+              Bar.style.marginLeft = "-45%"
+              IMG.style.marginLeft= "50%";
+              Bar.style.height= "800px"
+            
+              User.style.width= "400px";
+             Body.style.display= "none";
+             
+            }
+            else{
+              Bar.style.display= "none";
+            }
+          };
+    let savedItems = [];
+
+function saveItem(buttonElement) {
+  let itemId = buttonElement.closest('.gridbox').id;
+  if (!savedItems.includes(itemId)) {
+    savedItems.push(itemId);
+    console.log("Saved:", itemId);
+    buttonElement.textContent = "Saved";
+    buttonElement.disabled = true;
+  }
+};    
+
+function sendSavedItems() {
+  if (savedItems.length === 0) {
+    alert("No items saved yet.");
+    return;
+  }
+
+  fetch("https://jodna-portfolio.onrender.com/item/save/ProjectId", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+       "Authorization": `Bearer ${token}`
+    },
+    body: JSON.stringify({
+      userId: "12345", // Optional: include user ID or token if needed
+      items: savedItems
+    })
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error("Failed to save items.");
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log("Server Response:", data);
+    alert("Saved items successfully sent to backend.");
+  })
+  .catch(error => {
+    console.error("Error:", error);
+    alert("Failed to send saved items.");
+  });
+}*/
+
+   </script> 
+    </body>
+
+</html>

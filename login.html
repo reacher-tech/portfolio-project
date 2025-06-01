@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>portfoilio project for team 2</title>
+          <script src="project.js"> </script>
+        <style>
+            h1{
+                justify-self: center;
+                align-self: center;
+            }
+            header{
+                background-color: white;
+                width: 100%;
+                height: 50px;
+                display: flex;
+                margin-top: -10px;
+                margin-left: -10px;
+                padding-right: 16px;
+            }
+            
+            input{
+                background-color: white;
+                width: 90%;
+                height: 25px;
+                border: none;
+            }
+            form{
+              margin-left: 10%; 
+              background-color: rgb(188, 210, 209);
+              color: #341734; 
+              padding-left: 20px;
+              padding-top: 10px;
+            }
+            h1{
+              color: #551d55;
+            }
+            #form{
+             justify-self: center;
+             align-self: center;
+             justify-content: center;
+              width: 50%;
+              height: 50%;
+             
+            }
+            body{
+                background-color: rgb(209, 239, 244); 
+            }
+            button{
+                color: white;
+                background-color: green;
+                width: 50%;
+                height: 25px;
+                margin-top: 20px;
+                border: none;
+                border-radius: 30px;
+                margin-left: 20%;
+                 margin-bottom: 5%;
+            }
+            main{
+                margin-top: 5%;
+            }
+        
+        </style>
+    </head>
+  <body>
+      <header>
+     <img src="media/Logo.png" alt="logo">  <p>jodna technologies</p>
+      </header>
+      <main>
+        <h1>login</h1>
+        <div id="form"><form action="profile-dashboard.html" method="post" onsubmit=" checkUserTokenAndRedirect()">
+            <p>email address</p>
+            <input type="email" name="emailaddress" id="emailaddress">
+            <p>password</p>
+            <input type="password" name="password" id="password">
+            <button type="submit" onclick="login(event)">log in user &rightarrow;</button><br>   
+        </form></div>
+      </main>
+      <footer>
+
+      </footer>
+      <script>
+     
+    /*function login(event) {
+    
+        var Email = document.getElementById('emailaddress').value;
+        var password = document.getElementById('password').value;
+        if (!Email || !password) {
+          alert("provide input");
+          event.preventDefault();
+          return;
+        }else{
+          window.location.href = "profile-dashboard.html";
+        } 
+      };
+      
+        function checkUserTokenAndRedirect() {
+      const token = localStorage.getItem('authToken');
+
+    if (token) {
+       window.location.href = '/profile-dashboard.html';
+       } else {
+      window.location.href = '/signUP.html';
+     }
+      };
+      
+      function log() {
+       document.addEventListener('DOMContentLoaded', () =>{
+         checkUserTokenAndRedirect()
+         })
+    };
+    
+     document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('form').addEventListener('submit', (event)=>{
+      event.preventDefault();
+
+      const Email = document.getElementById('emailaddress').value;
+      const password = document.getElementById('password').value;
+
+     fetch("https://jodna-portfolio.onrender.com/auth/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          email: Email,
+          password: password,
+        }) })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(data => {
+        console.log("Login success:", data);// Save token or redirect, e.g.:
+        // localStorage.setItem("token", data.token);
+        // window.location.href = "explore.html";
+      })
+      .catch(error => console.error("Fetch error:", error));
+    });
+  });*/
+
+
+      </script>
+      </body>
+      </html>
+      

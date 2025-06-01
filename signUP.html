@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>portfoilio project for team 2</title>
+        <script src="project.js"> </script>
+        <style>
+            h1{
+                justify-self: center;
+                align-self: center;
+            }
+            header{
+                background-color: white;
+                width: 100%;
+                height: 50px;
+                display: flex;
+                margin-top: -10px;
+                margin-left: -10px;
+                padding-right: 16px;
+            }
+            
+            input{
+                background-color: white;
+                width: 90%;
+                height: 25px;
+                border: none;
+            }
+            form{
+              margin-left: 10%; 
+              background-color: rgb(188, 210, 209);
+              color: #341734; 
+              padding-left: 20px;
+              padding-top: 10px;
+            }
+            h1{
+              color: #551d55;
+            }
+            #form{
+             justify-self: center;
+             align-self: center;
+             justify-content: center;
+              width: 50%;
+              height: 50%;
+            }
+            body{
+                background-color: rgb(209, 239, 244); 
+            }
+            button{
+                color: white;
+                background-color: green;
+                width: 50%;
+                height: 25px;
+                margin-top: 30px;
+                border: none;
+                border-radius: 30px;
+                margin-left: 20%;
+            }
+          span{
+            margin-left: 20%;
+            font-size: 20px;
+          }
+        </style>
+        
+    </head>
+  <body>
+      <header>
+     <img src="media/Logo.png" alt="logo">  <p>jodna technologies</p>
+      </header>
+      <main>
+        <h1>sign up</h1>
+        <div id="form"><form action="explore.html" method="post">
+            <p>first name</p>
+            <input type="text" name="firstname" id="firstname">
+             <p> lastname</p>
+            <input type="text" name="lastname" id="lastname">
+            <p>email address</p>
+            <input type="email" name="emailaddress" id="emailaddress">
+            <p>password</p>
+            <input type="password" name="password" id="password">
+            <p>confirm password</p>
+            <input type="password" name="checkpass" id="checkpass"> <br>
+            <button type="submit">sign up &rightarrow;</button><br>
+            <span>already have an account? <a href="login.html"> log in</a></span>
+            
+        </form></div>
+
+      </main>
+      <footer>
+
+      </footer>
+      <script>
+        /* var Firstname = document.getElementById('firstname').value;
+         var  Lastname = document.getElementById('lastname').value;
+         var Email = document.getElementById('emailaddress').value;
+         var password = document.getElementById('password').value;
+         var passkey = document.getElementById('checkpass').value;
+
+    function handleFormSubmission(event) {
+      event.preventDefault();
+       var  Firstname = document.getElementById('firstname').value;
+       var  Lastname = document.getElementById('lastname').value;
+         var Email = document.getElementById('emailaddress').value;
+         var password = document.getElementById('password').value;
+         var passkey = document.getElementById('checkpass').value;
+
+      if (!Firstname || !Lastname || !password || !Email || !passkey) {
+        alert("Please fill out all fields.");
+        return;
+      }
+      else{
+
+      window.location.href = "explore.html";
+    } 
+    }
+    document.getElementById('form').addEventListener('submit',handleFormSubmission);
+
+   document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('form').addEventListener('submit', (event)=>{
+      event.preventDefault();
+
+    var  Firstname = document.getElementById('firstname').value;
+       var  Lastname = document.getElementById('lastname').value;
+         var Email = document.getElementById('emailaddress').value;
+         var password = document.getElementById('password').value;
+
+     fetch("https://jodna-portfolio.onrender.com/auth/signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          firstname: Firstname,
+          lastname: Lastname,
+          email: Email,
+          password: password
+        }) })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(data => {
+        console.log("Login success:", data);// Save token or redirect, e.g.:
+        // localStorage.setItem("token", data.token);
+        // window.location.href = "explore.html";
+      })
+      .catch(error => console.error("Fetch error:", error));
+    });
+  });*/
+
+      </script>
+      </body>
+      </html>

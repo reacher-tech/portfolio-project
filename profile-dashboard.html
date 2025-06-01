@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="my-style.css">
+</head>
+<body>
+   
+
+    
+<div class="cover-photo"> 
+
+    <div class="navigate">
+
+        <img id="logo" src="./Images/Logo.png">
+        <h2 id="company-name">Jodna Technologies</h2>
+        <a id="explore" href="">Explore</a>
+
+        <img id="search" src="./Images/fi-rr-search.png">
+        <input type="text" placeholder="Search Creative work" id="creative-search">
+        
+        <button id="share">share your work</button>
+        <img src="./Images/mdi_arrow-right-thin.png" class="share">
+        <img class="notify" src="./Images/notify.png">
+
+        <div class="top-profile">
+            <div id="top-pic">
+                <img src="Images/default-pic.jpg" style="border-radius: 100%; height: 100%; width: 100%;">
+                
+            </div>
+            <div>
+                <div id="top-name"><b>Adewale Austin</b></div>
+                <div id="top-field" style="font-size: x-small;">UI/UX Design Intern</div>
+            </div>
+            <img id="drop-down" src="./Images/lsicon_down-outline.png">
+        </div>
+
+    </div>
+
+    <div class="nav-border"></div>
+
+</div>
+
+    <div class="profile-picture">
+       <img src="Images/default-pic.jpg" style="border-radius: 100%; height: 100%; width: 100%; object-fit: cover;" id="pro-pic">
+        <input type="file" accept="image/jpg, image/png, image/jpeg" id="edit-pic">
+        
+    </div>
+
+<div class="my-profile">
+    
+    <div class="profile-area">
+        <div id="name" style="text-align: center; font-size: x-large;"><b>Adewale Austin</b></div>
+        <div id="work-field" style="text-align: center;font-size: small;">UI/UX designer/front-end developer</div>
+        <button id="edit">Edit Profile</button>
+
+        <div class="views">
+            <p>Portfolio Views</p>
+            <p>0</p>
+        </div>
+        <div class="likes">
+            <p>Likes</p>
+            <p>0</p>
+        </div>
+        <div class="help">
+            <p>Help</p>
+            <img src="./Images/mdi_chevron-right.png" style="height: 30px;margin-top: 11px;margin-left: 110px;">
+        </div>
+        <div class="settings">
+            <p>Settings</p>
+            <img src="./Images/mdi_chevron-right.png" style="height: 30px;margin-top: 11px;margin-left: 90px;">
+        </div>
+        <img class="log-out" src="./Images/logout.png">
+
+        <button id="log-out">Log Out</button>
+        
+    </div>
+    <div class="work-area">
+        <div class="nav-object">
+            <a href="">My Work</a>
+            <a href="">Saved Items</a>
+            <a href="">Draft</a>
+            <a href="">Analytics</a>
+            <a href="">About</a>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    let profilePicture = document.querySelector("#pro-pic");
+    let editPic = document.querySelector("#edit-pic");
+      
+      profilePicture.addEventListener('click', () => {
+      editPic.click();
+    });
+
+    editPic.onchange = function(){
+    profilePicture.src = URL.createObjectURL(editPic.files[0]);
+        
+   
+    }
+
+</script>
+
+
+</body>
+</html>
