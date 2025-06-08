@@ -8,24 +8,21 @@
 </head>
 <body style="background-color: rgb(248, 244, 238);">
     <div class="navigate">
-        <img id="logo" src="./Images/Logo.png">
-        <h2 id="company-name">Jodna Technologies</h2>
-        <a id="explore" href="">Explore</a>
+        <img id="logo" src="./Images/Logo.png" style="width: 50px; height: 50px;">
+        <h2 id="company-name" style="font-size: 15px;color: green;">Jodna Technologies</h2>
+        <a id="explore" href="" style="font-size: 15px;">Explore</a>
         <img id="search" src="./Images/fi-rr-search.png">
         <input type="text" placeholder="Search Creative work" id="creative-search">
-        <button id="share">share your work</button>
-        <img src="./Images/mdi_arrow-right-thin.png" class="share">
-        <img class="notify" src="./Images/notify.png">
+        <button id="share" style="width: 12%;">share your work</button>
+        <img class="notify" src="./Images/notify.png" style="height: 30px; width: 30px;">
 
-        <div class="top-profile">
-            <div id="top-pic"><img src="./Images/default-pic.jpg" style="border-radius: 100%; height: 100%; width: 100%; object-fit: cover;">
-            </div>
+        <div class="top-profile" style="height: 40%;width:20%; ">
+        
             <div>
                 <div id="top-name"><b>Adewale Austin</b></div>
                 <div id="top-field" style="font-size: x-small;">UI/UX Design Intern</div>
             </div>
-            <img id="drop-down" src="./Images/lsicon_down-outline.png">
-        </div>
+         </div>
 
     </div>
 
@@ -78,57 +75,40 @@
             
             <div class="input-search">
                 <input type="text" placeholder="Search Creatives Work">
-                <img src="./Images/fi-rr-search.png" alt="search">
+            
             </div>
             
                 <div class="sort">
-                    <img src="/Images/fi-rr-filter.png">
-                     <span style="position: relative; top: -6px;left: 5px;">Sort By</span>
-                   <img src="/Images/lsicon_down-outline.png" style="position: relative;top: 6px;left: 5px;">
-                </div>
+            
+                     <p>sort by</p>
+                         </div>
 
         </div>
             <div style="display: flex; gap: 10px; margin-top: 20px;margin-left: -25px;">
 
                 <button>All</button>
-                <button><span style="text-align: center;">UI/UX Design</span>
-                    <img src="/Images/mdi_chevron-right.png">
-                </button>
-                <button><span>Frontend</span>
-                    <img src="/Images/mdi_chevron-right.png">
-                </button>
-                <button><span>Graphic Design</span>
-                    <img src="/Images/mdi_chevron-right.png">
-                </button>
-                <button><span>Backend</span>
-                    <img src="/Images/mdi_chevron-right.png">
-                </button>
-                <button><span>Web Dev</span>
-                    <img src="/Images/mdi_chevron-right.png">
-                </button>
-                <button><span>Mobile Apps</span>
-                    <img src="/Images/mdi_chevron-right.png">
-                </button>
-                <button><span>Animation</span>
-                    <img src="/Images/mdi_chevron-right.png">
-                </button>
-                <button><span>Branding</span>
-                    <img src="/Images/mdi_chevron-right.png">
-                </button>
-                <button><span>Motion Design</span>
-                    <img src="/Images/mdi_chevron-right.png">
-                </button>
-                <button><span>Illustration</span>
-                    <img src="/Images/mdi_chevron-right.png">
-                </button>
-                <button><span>3D</span>
-                    <img src="/Images/mdi_chevron-right.png">
-                </button>
+                <button><span style="text-align: center;">UI/UX Design</span></button>
+                <button><span>Frontend</span></button>
+                <button><span>Graphic Design</span></button>
+                <button><span>Backend</span></button>
+                <button><span>Web Dev</span></button>
+                <button><span>Mobile Apps</span></button>
+                <button><span>Animation</span> </button>
+                <button><span>Branding</span></button>
+                <button><span>Motion Design</span></button>
+                <button><span>Illustration</span></button>
+                <button><span>3D</span></button>
 
             </div>
         </div>
         
     </div>
+   <script>
+    const token = localStorage.getItem("authToken");
+if (!token) {
+  window.location.href = "login.html";
+}
 
+   </script>
 </body>
 </html>

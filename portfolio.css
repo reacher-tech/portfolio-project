@@ -2,6 +2,7 @@ body{
     position: relative;
     align-self: center;
     background-color: rgb(244, 250, 245);
+    overflow-x: hidden;
     }
 .header{
     width: 100%;

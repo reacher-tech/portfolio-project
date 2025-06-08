@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>portfoilio project for team 2</title>
-         <script src="project.js"> </script>
+         <script> </script>
         <style>
         #background{
             background-image: url(media/Rectangle\ 3.png);
@@ -20,7 +20,7 @@
         #write{
             display: flex;
             z-index: 1;
-            justify-content: space-evenly;
+            justify-content: space-between;
             width: 100%;
             height: 50px;
             border: 2px  solid white;
@@ -51,6 +51,7 @@
             padding-left: 10px;
             border: 1px solid white;
             color: black;
+            margin-left: 10px;
             border-radius: 20px;
             margin-top: 10px;
             opacity: 0.5;
@@ -63,7 +64,7 @@
         }
       #user{
         height: 50px;
-        width: 200px;
+        width: 100px;
       }
       #dp{
        margin-top: -5% ;
@@ -119,10 +120,11 @@
       <header>
         <div id="background">
             <div id="write"> <img src="media/Logo.png" alt="logo" id="logo"> 
-                <p><b>jodna technologies</b></p> <p><a href="explore.html">explore</a></p> 
+                <p style="width: 290px; font-size: 20px;" ><b>jodna technologies</b></p> <p style="margin-left:-50px;"><a href="explore.html">explore</a></p> 
                 <input type="search" id="search" placeholder="search creative works"> 
-                <button><a href="upload.html">share your work &rightarrow;</a></button> <a href="notifications.html"><img src="media/png.webp" alt="notify" id="notif"></a>
-             <img src="media/Component 1.png" alt="" id="user"></div>
+                <button style="width: 15%; margin-left: 10px;"><a href="upload.html">share your work &rightarrow;</a></button>
+                 <a href="notifications.html"><img src="media/png.webp" alt="notify" id="notif" style="margin-left: 50px;"></a>
+             <p id="user" style="font-size: 20px; margin-left: 5%;"></p></div>
      
       </header>
       <main>
@@ -163,7 +165,23 @@
             
             </main>
             <script>
-              /*document.addEventListener("DOMContentLoaded", () => {
+   const token = localStorage.getItem("authToken");
+if (!token) {
+  window.location.href = "login.html";
+}
+ const firstname = localStorage.getItem("firstname");
+    const lastname = localStorage.getItem("lastname");
+    console.log(firstname, lastname);
+
+    const userInfo = document.getElementById('user');
+    
+    if (userInfo) {
+        userInfo.innerHTML = `<b>${firstname} ${lastname}</b>`;
+    
+    };
+
+
+              document.addEventListener("DOMContentLoaded", () => {
     fetchSavedItems();
   });
 
@@ -171,8 +189,14 @@
     fetch('https://jodna-portfolio.onrender.com/item/all') // Replace with your actual API
       .then(response => response.json())
       .then(data => {
-        const savedItems = data.items; // Assuming API returns { items: [...] }
+        const savedItems = data.item; // Assuming API returns { items: [...] }
         const grid = document.getElementById("grid");
+
+        const token = localStorage.getItem("authToken");
+    if (!token) {
+    window.location.href = "login.html"; // redirect to login
+     }
+
 
         // Clear any existing saveboxes
         grid.innerHTML = "";
@@ -198,7 +222,7 @@
       .catch(error => {
         console.error("Failed to fetch saved items:", error);
       });
-  } */
+  };
 
             </script>
             </body>

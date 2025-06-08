@@ -31,6 +31,7 @@
             width: 10%;
             height: 25px;
             margin: 15px;
+            margin-left: -25px;
             font-size: 10px;
             background-color: white;
             
@@ -42,10 +43,12 @@
             padding-left: 10px;
             margin: 10px;
             border: 1px solid black;
+            margin-left: -25px;
           }
           #noty{
             height: 35px;
             width: 35px;
+            margin-left: -25px;
           }
         #logo{
             width: 50;
@@ -391,6 +394,6 @@ main{
 .add{
   color: white;
   background-color: rgb(68, 229, 84);
-  border: 1px solid rgb(222, 68, 68);
+  border: 1px solid rgb(243, 217, 241);
   border-radius: 20px;
 }

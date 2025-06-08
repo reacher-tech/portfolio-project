@@ -95,7 +95,11 @@
 
       </footer>
       <script>
-       
+const token = localStorage.getItem("authToken");
+if (!token) {
+  window.location.href = "login.html";
+}
+
       </script>
       </body>
       </html>

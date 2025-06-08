@@ -5,18 +5,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>portfoilio project for team 2</title>
         <link rel="stylesheet" href="explore.css">
-        <script src="project.js"></script>
+        
     </head>
     <body>
         <header>
             <div id="header">
                 <img src="media/Logo.png" alt="logo" id="logo">
-                 <p><b>Jodna Technologies</b></p> 
-                <button id="explore"><b>Explore</b></button> 
+                 <p style="color: green;"><b>Jodna Technologies</b></p> 
+                <button id="explore" style="color: green;"><b>Explore</b></button> 
                 <input type="text" name="search" placeholder=" search creative work" id="search">
                  <a href="upload.html"><button id="sharebutton">share your work &#8594</button></a>
                 <a href="notifications.html"></a><img src="media/png.webp" alt="" id="noty"></a>
-                <a href="profile-dashboard.html"><img src="media/Component 1.png" alt="userprofile" id="userprofile"></a>
+                <a href="profile-dashboard.html"><div id="userprofile" style="margin-top: 2%; font-size: 20px;"><p></p></div></a>
             </div>
               <div id="mobile" class="mobview"> 
                <div style="display: flex;"><img src="media/Logo.png" alt="" style="height: 50px; width: 50p;" ><p>jodna Technologies</p></div>
@@ -74,7 +74,7 @@
           </div>
           <div id="bar">
            <div id="firstbar">
-            <div id="searchbar"> <img src="media/fi-rr-search.png" alt="" style="height: 15px; width: 15px; margin: 10px;"><input type="button" value="search creative works" style="background-color: white; border: none;" id="place"></div>
+            <div id="searchbar"> <img src="media/fi-rr-search.png" alt="" style="height: 15px; width: 15px; margin: 10px;"><input type="button" value="search creative works" style="background-color: white; border: none; border: none;" id="place"></div>
             <div id="sortbar"><img src="media/fi-rr-filter.png" alt=""> <span>sort by &blacktriangledown;</span></div>
          </div>
         
@@ -120,7 +120,7 @@
         <footer>
         </footer>
    <script>
-    /*function toggleDropdown() {
+    function toggleDropdown() {
   const dropdown = document.getElementById("dropcontent");
   var SubHead = document.getElementById("console")
   var gridMove = document.getElementById('grid');
@@ -157,9 +157,30 @@ function display() {
               Bar.style.display= "none";
             }
           };
+
+          const token = localStorage.getItem("authToken");
+if (!token) {
+  window.location.href = "login.html";
+};
+
+
+  const firstname = localStorage.getItem("firstname");
+    const lastname = localStorage.getItem("lastname");
+    console.log(firstname, lastname);
+
+    const userInfo = document.getElementById('userprofile');
+    
+    if (userInfo) {
+        userInfo.innerHTML = `<b>${firstname} ${lastname}</b>`;
+    }
+
+
     let savedItems = [];
+    
 
 function saveItem(buttonElement) {
+   const token = localStorage.getItem("authToken");//very important
+  
   let itemId = buttonElement.closest('.gridbox').id;
   if (!savedItems.includes(itemId)) {
     savedItems.push(itemId);
@@ -169,22 +190,31 @@ function saveItem(buttonElement) {
   }
 };    
 
+
 function sendSavedItems() {
+  // Refresh the token from localStorage
+  const token = localStorage.getItem("authToken");
+
+  if (!token) {
+    alert("Invalid or missing token. Please log in again.");
+    window.location.href = "login.html";
+    return;
+  }
+
   if (savedItems.length === 0) {
     alert("No items saved yet.");
     return;
   }
 
-  fetch("https://jodna-portfolio.onrender.com/item/save/ProjectId", {
+  fetch('https://jodna-portfolio.onrender.com/item/save/ProjectId', {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-       "Authorization": `Bearer ${token}`
     },
-    body: JSON.stringify({
-      userId: "12345", // Optional: include user ID or token if needed
-      items: savedItems
-    })
+    credentials: "include", 
+  body: JSON.stringify({
+    projectIds: savedItems
+  })
   })
   .then(response => {
     if (!response.ok) {
@@ -200,9 +230,8 @@ function sendSavedItems() {
     console.error("Error:", error);
     alert("Failed to send saved items.");
   });
-}*/
+}
 
    </script> 
     </body>
-
 </html>

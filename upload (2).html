@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload your work</title>
+    <link rel="stylesheet" href="my-style.css">
+    <link rel="stylesheet" >
+</head>
+<body>
+    <div class="navigate">
+        <img id="logo" src="./Images/Logo.png">
+        <h2 id="company-name">Jodna Technologies</h2>
+        <a id="explore" href="">Explore</a>
+        <img id="search" src="./Images/fi-rr-search.png">
+        <input type="text" placeholder="Search Creative work" id="creative-search">
+        <button id="share">share your work</button>
+        <img src="./Images/mdi_arrow-right-thin.png" class="share">
+        <a href="notifications.html"><img class="notify" src="./Images/notify.png"></a>
+
+        <div class="top-profile">
+            <div id="top-div">
+            <img id="top-pic" src="./Images/default-pic.jpg" style="border-radius: 100%; height: 100%; width: 100%; object-fit: cover;">
+            </div>
+            <div>
+                <div id="top-name"><b>Adewale Austin</b></div>
+                <div id="top-field" style="font-size: x-small;">UI/UX Design Intern</div>
+            </div>
+            <img id="drop-down" src="./Images/lsicon_down-outline.png">
+        </div>
+
+    </div>
+
+
+
+    <div class="mobile">
+        <img style="margin-top: 10px;" id="logo" src="./Images/Logo.png">
+        <h2 style="margin-top: 15px;" id="company-name">Jodna Technologies</h2>
+        <img class="notify" src="./Images/notify.png">
+        <div style="margin-top: 10px;" id="top-pic"><img src="./Images/default-pic.jpg" style="border-radius: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <img style="height: 100%; margin-top: 15px;" id="drop-down" src="./Images/lsicon_down-outline.png">
+
+
+    </div>
+
+
+    <div class="mobile-two">
+        <a id="explore" href="">Explore</a>
+        <img id="search" src="./Images/fi-rr-search.png">
+        <input type="text" placeholder="Search Creative work" id="creative-search">
+        <button id="share">share your work</button>
+        <img src="./Images/mdi_arrow-right-thin.png" class="share">
+    </div>
+
+
+    <div class="sec-nav">
+        <button id="cancel">Cancel</button>
+        <div>
+            <button id="draft">Save as Draft</button>
+            <button id="continue">Continue</button>
+        </div>
+    </div>
+
+    <div class="upload-msg">
+        <h1>Upload your Project</h1>
+        <p id="message">Fill in the details below and share it with the world</p>
+    </div>
+
+    <div class="upload-area">
+        
+        <img style="position: absolute; z-index: -1;" id="image" src="./Images/image.png">
+        <p id="drag-drop" style="position: absolute; top: 180px; left: 57vh;">Drag & drop<span style="margin-left: 25px;">or</span><span style="margin-left: 25px;color: darkgreen; cursor: pointer;"><b id="browse">Browse</b></span></p>
+
+        <img id="upload-work" src="" style="object-fit: cover; height: 100%; width: 100%; border-radius: 30px;">
+        <input style="display: none;" type="file" accept="image/*" id="upload-work-input">
+
+    </div>
+
+    <div style="text-align: center;">
+        <p style="margin-top: 25px;"><b>Pro Tip:</b> Great portfolio entries includes high-quality images, clear and concise descriptions, and a 
+        <p style="margin-top: -15px;">well-documented process. Show the problem you solved and the impact of your work!</p>
+    </div>
+
+
+   <script>
+
+    const uploadWorkInput = document.getElementById("upload-work-input");
+const uploadAreaContainer = document.querySelector("#browse");
+const uploadwork = document.getElementById("upload-work");
+const textOverlay = document.getElementById("drag-drop");
+
+uploadAreaContainer.addEventListener('click', () => {
+  uploadWorkInput.click();
+});
+
+uploadWorkInput.addEventListener('change', (e) => {
+  const file = uploadWorkInput.files[0];
+  const reader = new FileReader();
+  reader.onload = () => {
+    uploadwork.src = reader.result;
+
+    textOverlay.style.display = 'none';
+  };
+  reader.readAsDataURL(file);
+ 
+});
+
+   </script>
+
+</body>
+</html>

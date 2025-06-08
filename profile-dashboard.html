@@ -5,54 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
     <link rel="stylesheet" href="my-style.css">
+    <script src=""></script>
 </head>
 <body>
-   
-
-    
+           <header>
 <div class="cover-photo"> 
 
     <div class="navigate">
 
-        <img id="logo" src="./Images/Logo.png">
-        <h2 id="company-name">Jodna Technologies</h2>
-        <a id="explore" href="">Explore</a>
+        <img id="logo" src="./Images/Logo.png" style="height: 50px; width: 50px;">
+        <h2 id="company-name" style="font-size: 15px;">Jodna Technologies</h2>
+        <a id="explore" href="explore.html">Explore</a>
 
         <img id="search" src="./Images/fi-rr-search.png">
         <input type="text" placeholder="Search Creative work" id="creative-search">
         
-        <button id="share">share your work</button>
+        <button id="share" > <a href="upload.html">share your work</a></button>
         <img src="./Images/mdi_arrow-right-thin.png" class="share">
-        <img class="notify" src="./Images/notify.png">
+         <a href="notifications.html"><img class="notify" src="./Images/notify.png"></a>
 
-        <div class="top-profile">
-            <div id="top-pic">
-                <img src="Images/default-pic.jpg" style="border-radius: 100%; height: 100%; width: 100%;">
-                
+        
+            <div id="user-info" style=" margin-top: 2%; width:10% ; margin-left:10%; font-size: 20px; color: black;">
             </div>
-            <div>
-                <div id="top-name"><b>Adewale Austin</b></div>
-                <div id="top-field" style="font-size: x-small;">UI/UX Design Intern</div>
-            </div>
-            <img id="drop-down" src="./Images/lsicon_down-outline.png">
-        </div>
-
-    </div>
-
-    <div class="nav-border"></div>
+            <div class="nav-border"></div>
 
 </div>
+    </header> 
+    <main>
+
+    
 
     <div class="profile-picture">
        <img src="Images/default-pic.jpg" style="border-radius: 100%; height: 100%; width: 100%; object-fit: cover;" id="pro-pic">
         <input type="file" accept="image/jpg, image/png, image/jpeg" id="edit-pic">
-        
+
     </div>
 
 <div class="my-profile">
     
     <div class="profile-area">
-        <div id="name" style="text-align: center; font-size: x-large;"><b>Adewale Austin</b></div>
+        <div id="name" style="text-align: center; font-size: x-large;"><b> </b></div>
         <div id="work-field" style="text-align: center;font-size: small;">UI/UX designer/front-end developer</div>
         <button id="edit">Edit Profile</button>
 
@@ -80,14 +72,14 @@
     <div class="work-area">
         <div class="nav-object">
             <a href="">My Work</a>
-            <a href="">Saved Items</a>
+            <a href="saved.html">Saved Items</a>
             <a href="">Draft</a>
             <a href="">Analytics</a>
             <a href="">About</a>
         </div>
     </div>
 </div>
-
+</main>
 <script>
 
     let profilePicture = document.querySelector("#pro-pic");
@@ -97,14 +89,16 @@
       editPic.click();
     });
 
-    editPic.onchange = function(){
-    profilePicture.src = URL.createObjectURL(editPic.files[0]);
-        
-   
+    const firstname = localStorage.getItem("firstname");
+    const lastname = localStorage.getItem("lastname");
+    console.log(firstname, lastname);
+
+    const userInfo = document.getElementById('user-info');
+    const NameId= document.getElementById('name')
+    if (userInfo) {
+        userInfo.innerHTML = `<b>${firstname} ${lastname}</b>`;
+        NameId.innerHTML = `<b>${firstname} ${lastname}</b>`;
     }
-
-</script>
-
-
+ </script>
 </body>
 </html>
